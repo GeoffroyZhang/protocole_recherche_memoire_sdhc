@@ -1,7 +1,10 @@
-# Communautés associatives chinoises sur le Web
-## Pour une histoire numérique des Chinois d'outre-mer en France entre 2006 et 2026
+# Intitulé du mémoire
+> Communautés associatives chinoises sur le Web : Pour une histoire numérique des Chinois d'outre-mer en France entre 2006 et 2026
 
-**Mémoire de recherche SDHC — Geoffroy Zhang**
+**Mémoire de recherche Sciences des données et Histoire M1 et M2 à l'Université Paris 1 Panthéon-Sorbonne**
+
+## Directeurs de mémoire
+Pr. Pierre Singaravélou & Pr. Gaëtan Bonnot
 
 Ce dépôt contient l'ensemble des scripts mobilisés dans le cadre du protocole de recherche du mémoire. Il est organisé selon la structure des chapitres afin de permettre à tout lecteur de retrouver facilement les scripts évoqués dans le corps du texte.
 
@@ -148,8 +151,8 @@ Les analyses textométriques (CDH, graphe de similitude, AFC) ont été réalis�
 
 ---
 
-## Citation
+## Auteur
 
 Si vous utilisez ce protocole dans vos travaux, merci de citer :
 
-> Zhang, Geoffroy. *Communautés associatives chinoises sur le Web. Pour une histoire numérique des Chinois d'outre-mer en France entre 2006 et 2026*. Mémoire de recherche SDHC, 2026.
+> Geoffroy Zhang
