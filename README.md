@@ -6,7 +6,8 @@
 ## Directeurs de mémoire
 Pr. Pierre Singaravélou & Pr. Gaëtan Bonnot
 
-Ce dépôt contient l'ensemble des scripts mobilisés dans le cadre du protocole de recherche du mémoire. Il est organisé selon la structure des chapitres afin de permettre à tout lecteur de retrouver facilement les scripts évoqués dans le corps du texte.
+
+Ce dépôt contient l'ensemble des scripts mobilisés dans le cadre du protocole de recherche du mémoire. Il est organisé selon la structure des chapitres afin de permettre à tout lecteur de retrouver facilement les scripts évoqués dans le corps du texte. Celui-ci est encore en cours de progression et accueillera les scripts utilisé pour le Master 2.
 
 ---
 
@@ -18,7 +19,7 @@ protocole_recherche/
 ├── README.md
 ├── requirements.txt # Dépendances Python
 ├── requirements_R.txt # Dépendances R
-├── corpus_urls.txt # Liste des 46 URL composant le corpus
+├── corpus_urls.txt # Liste des 46 URL composant le corpus (URL de base)
 │
 ├── chapitre_1/ # Prospection et constitution du corpus
 │   ├── rna_nettoyage.py
@@ -26,10 +27,10 @@ protocole_recherche/
 │   └── R/
 │       └── 02_visualisations_bornes_chronologiques.R
 │
-├── chapitre_2/                   # Protocole de stabilisation du corpus
+├── chapitre_2/                   # Protocole de stabilisation du corpus et d'extractions des données des archives web
 │   ├── wayback/
 │   │   ├── 01_scraping_wayback_accueil.py
-│   │   └── 02_telecharger_warc.py
+│   │   └── 02_telecharger_warc.py          # Ce script est complémentaire du 01_scraping_wayback_accueil (Vous pouvez également le lancer seul car il comprend déjà tout à l'intérieur
 │   ├── extraction/
 │   │   ├── 01_wayback_extraction_metriques.py
 │   │   └── 01_httrack_extraction_metriques.py
@@ -40,19 +41,31 @@ protocole_recherche/
 │   └── sql/
 │       └── schema.sql
 │
-└── chapitre_3/                   # Analyse synchronique
-    ├── 01_geocodage_association.py
-    ├── R/
-    │   ├── asso_public_cible.R
-    │   ├── associations_par_decennie.R
-    │   ├── nb_cms_sites.R
-    │   ├── nb_langues.R
-    │   ├── occurence_par_commune.R
-    │   ├── repartition_demarche.R
-    │   └── services_proposes.R
-    └── sql/
-        ├── chap3_Partie1_requetes.sql
-        └── chap3_Partie2_requetes.sql
+├──  chapitre_3/                   # Analyse synchronique via l'exploitation de la base de données
+│   ├── 01_geocodage_association.py
+│   ├── R/
+│   │   ├── asso_public_cible.R
+│   │   ├── associations_par_decennie.R
+│   │   ├── nb_cms_sites.R
+│   │   ├── nb_langues.R
+│   │   ├── occurence_par_commune.R
+│   │   ├── repartition_demarche.R
+│   │   └── services_proposes.R
+│   └── sql/
+│       ├── chap3_Partie1_requetes.sql
+│       └── chap3_Partie2_requetes.sql
+│
+├──  chapitre_4/
+│
+├──  chapitre_5/
+│
+├──  chapitre_6/
+│
+├──  chapitre_7/
+│
+├──  chapitre_8/
+│
+├──  chapitre_9/
 ```
 
 ---
@@ -63,9 +76,19 @@ Le fichier `corpus_urls.txt` à la racine du dépôt contient la liste des 46 UR
 
 ---
 
+---
+
+## Chemin dans les scripts
+
+Les scripts ``Python`` et ``R`` contiennent des chemins pour les *input* et *output* qui correspondent à ceux du répertoire local utilisé dans le cadre du mémoire. Dans le cadre d'une réutilisation des scripts, veuillez modifier les chemins et mettre les votre. 
+
+---
+
 ## Description des scripts
 
-### Chapitre 1 — Prospection et constitution du corpus
+## Partie 1 — Pour une histoire nativement numérique des associations
+
+### Chapitre 1 — Une première enquête exploratoire
 
 **`rna_nettoyage.py`**
 Nettoyage du jeu de données du Répertoire National des Associations (RNA) afin d'identifier les associations chinoises disposant d'un site web. Applique un filtre par mots-clés sur les champs `titre` et `objet` des associations.
@@ -78,7 +101,7 @@ Scripts de visualisation des bornes chronologiques, du nombre de snapshots par U
 
 ---
 
-### Chapitre 2 — Protocole de stabilisation du corpus
+### Chapitre 2 — La mise en place d'un protocole méthodologique
 
 **`wayback/01_scraping_wayback_accueil.py`**
 Script principal de collecte des archives visuelles depuis la Wayback Machine. Pour chaque URL du corpus, interroge l'API CDX, charge chaque snapshot dans un navigateur Chromium via Playwright, et sauvegarde trois fichiers par snapshot : le HTML rendu, une capture d'écran pleine page (PNG) et un fichier de métadonnées (JSON).
@@ -103,7 +126,7 @@ Schéma SQL de la base de données relationnelle permettant sa recréation.
 
 ---
 
-### Chapitre 3 — Analyse synchronique
+### Chapitre 3 — Des acteurs associatifs hétérogènes ?
 
 **`01_geocodage_association.py`**
 Géocode les adresses des associations à partir d'un CSV exporté de la base de données. Utilise l'API Nominatim (OpenStreetMap) via geopy pour transformer les adresses en coordonnées GPS. Le fichier produit est importé dans QGIS pour la cartographie.
@@ -131,9 +154,9 @@ install.packages(c("ggplot2", "tidyverse", "modelsummary"))
 ```
 
 ### Base de données
-- MySQL pour l'hébergement de la base de données
 - MySQL Workbench pour la modélisation et l'exécution des requêtes
 - LibreOffice Base pour la saisie manuelle via formulaires
+- LibreOffice Base pour l'hébergement de la base de données en local
 
 ### HTTrack
 Le logiciel HTTrack est disponible sur : https://www.httrack.com
@@ -155,4 +178,8 @@ Les analyses textométriques (CDH, graphe de similitude, AFC) ont été réalis�
 
 Si vous utilisez ce protocole dans vos travaux, merci de citer :
 
+<<<<<<< HEAD
 > Geoffroy Zhang
+=======
+> Zhang, Geoffroy. *Communautés associatives chinoises sur le Web. Pour une histoire numérique des Chinois d'outre-mer en France entre 2006 et 2026*. Mémoire de recherche SDH, 2026.
+>>>>>>> b4f097faef632252d4973d88198facd1f1bbc2fc
