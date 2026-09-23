@@ -6,6 +6,7 @@
 ## Directeurs de mémoire
 Pr. Pierre Singaravélou & Pr. Gaëtan Bonnot
 
+## Description succincte
 
 Ce dépôt contient l'ensemble des scripts mobilisés dans le cadre du protocole de recherche du mémoire. Il est organisé selon la structure des chapitres afin de permettre à tout lecteur de retrouver facilement les scripts évoqués dans le corps du texte. Celui-ci est encore en cours de progression et accueillera les scripts utilisé pour le Master 2.
 
@@ -176,10 +177,5 @@ Les analyses textométriques (CDH, graphe de similitude, AFC) ont été réalis�
 
 ## Auteur
 
-Si vous utilisez ce protocole dans vos travaux, merci de citer :
+Geoffroy Zhang
 
-<<<<<<< HEAD
-> Geoffroy Zhang
-=======
-> Zhang, Geoffroy. *Communautés associatives chinoises sur le Web. Pour une histoire numérique des Chinois d'outre-mer en France entre 2006 et 2026*. Mémoire de recherche SDH, 2026.
->>>>>>> b4f097faef632252d4973d88198facd1f1bbc2fc
