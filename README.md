@@ -77,8 +77,6 @@ Le fichier `corpus_urls.txt` à la racine du dépôt contient la liste des 46 UR
 
 ---
 
----
-
 ## Chemin dans les scripts
 
 Les scripts ``Python`` et ``R`` contiennent des chemins pour les *input* et *output* qui correspondent à ceux du répertoire local utilisé dans le cadre du mémoire. Dans le cadre d'une réutilisation des scripts, veuillez modifier les chemins et mettre les votre. 
@@ -87,7 +85,7 @@ Les scripts ``Python`` et ``R`` contiennent des chemins pour les *input* et *out
 
 ## Description des scripts
 
-## Partie 1 — Pour une histoire nativement numérique des associations
+## I. Pour une histoire nativement numérique des associations
 
 ### Chapitre 1 — Une première enquête exploratoire
 
@@ -139,6 +137,12 @@ Scripts de visualisation des caractéristiques du corpus : répartition par comm
 Requêtes SQL utilisées pour l'extraction des données de la base de données en vue des analyses et visualisations du chapitre 3.
 
 ---
+
+## II. Une sphère web ancrée dans le temps
+
+---
+
+## III. Des acteurs singuliers
 
 ## Prérequis
 
